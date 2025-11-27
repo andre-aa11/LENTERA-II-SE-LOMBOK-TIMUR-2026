@@ -1,11 +1,11 @@
 /* ---------- Reset & Variables ---------- */
 :root {
-  --bg: linear-gradient(180deg, #0f172a 0%, #071133 60%);
-  --card: #0b1220aa;
-  --glass: rgba(255, 255, 255, 0.06);
-  --accent1: linear-gradient(90deg, #7c3aed, #06b6d4);
-  --text: #e6eef8;
-  --muted: #a7b0c3;
+  --bg: linear-gradient(180deg, #d9ff00 0%, #00ff7f 60%); /* neon yellow → neon green */
+  --card: rgba(255, 255, 255, 0.12);
+  --glass: rgba(255, 255, 255, 0.15);
+  --accent1: linear-gradient(90deg, #ccff00, #00ff80);
+  --text: #0c0000;
+  --muted: #d8ffd8;
   --radius: 16px;
   --maxw: 420px;
 }
@@ -34,20 +34,19 @@ body {
 .wrapper {
   width: 100%;
   max-width: var(--maxw);
-  background: radial-gradient(1200px 600px at 10% 10%, rgba(124, 58, 237, 0.08), transparent 10%),
-    radial-gradient(1000px 400px at 90% 90%, rgba(6, 182, 212, 0.06), transparent 10%);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 28px;
   padding: 28px;
-  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  background: linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0.1));
   border-radius: var(--radius);
   padding: 26px;
   text-align: center;
-  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.5);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
 /* ---------- Profile ---------- */
@@ -56,9 +55,9 @@ body {
   height: 96px;
   border-radius: 999px;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   margin: 0 auto 14px;
-  background: linear-gradient(180deg, #111827, #0b1220);
+  background: linear-gradient(180deg, #faff00, #ccff00); /* neon yellow */
 }
 
 .avatar img {
@@ -93,6 +92,7 @@ body {
   gap: 12px;
 }
 
+/* ——— BAGIAN YANG DIGANTI: BACKGROUND KUNING ——— */
 .link-btn {
   display: flex;
   align-items: center;
@@ -100,16 +100,15 @@ body {
   padding: 14px 16px;
   border-radius: 12px;
   text-decoration: none;
-  color: var(--text);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: #222;
+  background: linear-gradient(180deg, #fde047, #facc15); /* kuning gradasi */
+  border: 1px solid rgba(0,0,0,0.15);
   transition: transform .14s ease, box-shadow .14s ease;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.02) inset;
 }
 
 .link-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(255, 230, 0, 0.7); /* glow kuning */
 }
 
 .link-icon {
@@ -118,7 +117,7 @@ body {
   border-radius: 10px;
   display: grid;
   place-items: center;
-  background: var(--glass);
+  background: rgba(255,255,255,0.2);
 }
 
 /* ---------- Footer ---------- */
@@ -135,8 +134,8 @@ body {
   font-size: 13px;
   padding: 8px 10px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
   color: var(--muted);
   cursor: pointer;
 }
@@ -147,7 +146,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: 36px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(20, 20, 20, 0.8);
   color: #fff;
   padding: 10px 14px;
   border-radius: 10px;
@@ -171,18 +170,16 @@ body {
     padding: 20px;
   }
 }
+
 .icon-btn img {
   transition: 0.25s ease;
 }
 
-/* Efek membesar saat disentuh */
 .icon-btn:hover img {
   transform: scale(1.18);
   opacity: 0.9;
 }
 
-/* Tambahan glow ringan */
 .icon-btn:hover {
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
+  filter: drop-shadow(0 0 8px rgba(200,255,0,0.8)); /* neon glow */
 }
-
